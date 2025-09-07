@@ -1,0 +1,38 @@
+package in.sp.bean;
+
+import org.springframework.beans.factory.annotation.*;
+
+public class Student {
+	private String name;
+	private int rollno;
+	@Autowired
+	@Qualifier("createAddrObj1")
+	private Address address;
+	public String getName()
+	{
+		return name;
+		
+	}
+	public int getRollno() {
+		return rollno;
+	}
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+	//public Address getAddress() {
+	//	return address;
+	//}
+	//public void setAddress(Address address) {
+	//	this.address = address;
+	//}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void display()
+	{
+		System.out.println("Name:"+name);
+		System.out.println("Rollno:"+rollno);
+		System.out.println("Address:"+address);
+	}
+
+}
